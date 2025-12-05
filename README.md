@@ -18,7 +18,7 @@
 ## Структура на проекта
 
 ```
-library-system/
+cpp-oop-hw/
 ├── Author.h
 ├── Book.h
 ├── Member.h
