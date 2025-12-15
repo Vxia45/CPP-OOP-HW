@@ -11,10 +11,8 @@ private:
     bool returned;
 
 public:
-    // Конструктор по подразбиране
     Loan() : isbn(""), memberId(""), startDate(""), dueDate(""), returned(false) {}
     
-    // Параметризиран конструктор
     Loan(const string& isbn, const string& memberId, 
          const string& startDate, const string& dueDate)
         : isbn(isbn), memberId(memberId), startDate(startDate), 
@@ -25,7 +23,6 @@ public:
         }
     }
     
-    // Getters
     string getIsbn() const { 
         return isbn; 
     }
@@ -42,17 +39,14 @@ public:
         return returned; 
     }
     
-    // Маркира заема като върнат
     void markReturned() {
         returned = true;
     }
     
-    // Проверява дали е просрочен
     bool isOverdue(const string& today) const {
         return !returned && (today > dueDate);
     }
     
-    // Представяне като string (без ostringstream)
     string to_string() const {
         return "Loan: ISBN=" + isbn +
                ", Member=" + memberId +
